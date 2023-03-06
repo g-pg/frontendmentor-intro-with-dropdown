@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	min-height: 100vh;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	/* Customizar */
+}
