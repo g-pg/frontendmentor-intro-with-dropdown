@@ -31,10 +31,16 @@ const closeBtn = document.querySelector(".burger-close-btn");
 
 burgerBtn.addEventListener("click", () => {
 	burgerBtn.classList.add("active");
+	if (burgerBtn.classList.contains("active")) {
+		document.body.style.overflow = "hidden";
+	}
 });
 
 closeBtn.addEventListener("click", () => {
 	burgerBtn.classList.remove("active");
+	if (!burgerBtn.classList.contains("active")) {
+		document.body.style.overflow = "unset";
+	}
 });
 
 document.addEventListener("click", (e) => {
@@ -44,13 +50,13 @@ document.addEventListener("click", (e) => {
 });
 
 // Mobile adjustments
-const introImg = document.querySelector(".intro-img");
+// const introImg = document.querySelector(".intro-img");
 
-window.addEventListener("resize", () => {
-	if (window.innerWidth <= 780) {
-		introImg.src = "./assets/img/image-hero-mobile.png";
-	} else {
-		burgerBtn.classList.remove("active");
-		introImg.src = "./assets/img/image-hero-desktop.png";
-	}
-});
+// window.addEventListener("resize", () => {
+// 	if (window.innerWidth <= 780) {
+// 		introImg.src = "./assets/img/image-hero-mobile.png";
+// 	} else {
+// 		burgerBtn.classList.remove("active");
+// 		introImg.src = "./assets/img/image-hero-desktop.png";
+// 	}
+// });
