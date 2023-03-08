@@ -1,17 +1,15 @@
-// Cada dropdown li contém o botão e o menu dropdown respectivo
-// Quando a li tem a classe "active", os estilos dos children são aplicados pelos seletores no CSS
+//Desktop nav
+const dropdownBtns = document.querySelectorAll(".nav-dropdown-btn");
 
-const dropdownBtn = document.querySelectorAll(".nav-dropdown-btn");
-
-dropdownBtn.forEach((el) => {
-	const dropdownLi = el.parentNode;
+dropdownBtns.forEach((el) => {
+	const dropdownMenu = el.parentNode;
 
 	el.addEventListener("click", () => {
-		dropdownLi.classList.toggle("active");
+		dropdownMenu.classList.toggle("active");
 
-		if (!dropdownLi.classList.contains("burger")) {
+		if (!dropdownMenu.classList.contains("burger")) {
 			document.querySelectorAll(".nav-dropdown-li.active").forEach((li) => {
-				if (li != dropdownLi) {
+				if (li != dropdownMenu) {
 					li.classList.remove("active");
 				}
 			});
